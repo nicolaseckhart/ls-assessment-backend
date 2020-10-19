@@ -1,24 +1,26 @@
-# README
+# LS Assessment
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+## Setup
 
-Things you may want to cover:
+```
+bin/setup
+```
 
-* Ruby version
+## Run Checks
 
-* System dependencies
+```
+bin/check
+```
 
-* Configuration
+## Run
 
-* Database creation
+```
+bin/run
+```
 
-* Database initialization
+## Manual Tests
 
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+```
+curl http://localhost:3000/places/GXvPAor1ifNfpF0U5PTG0w
+curl http://localhost:3000/places/ohGSnJtMIC5nPfYRi_HTAg
+```
