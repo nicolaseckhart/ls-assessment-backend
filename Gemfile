@@ -1,13 +1,15 @@
+# frozen_string_literal: true
+
 source 'https://rubygems.org'
 git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 
 ruby File.read(File.join(__dir__, '.ruby-version'))
 
-gem 'rails', '~> 6.0.3', '>= 6.0.3.4'
+gem 'bootsnap', '>= 1.4.2', require: false
+gem 'figaro'
 gem 'pg', '>= 0.18', '< 2.0'
 gem 'puma', '~> 4.1'
-gem 'figaro'
-gem 'bootsnap', '>= 1.4.2', require: false
+gem 'rails', '~> 6.0.3', '>= 6.0.3.4'
 
 group :production do
   gem 'lograge'
@@ -15,6 +17,7 @@ end
 
 group :development do
   gem 'listen', '~> 3.2'
+  gem 'mdl', require: false
   gem 'spring'
   gem 'spring-watcher-listen', '~> 2.0.0'
 end
