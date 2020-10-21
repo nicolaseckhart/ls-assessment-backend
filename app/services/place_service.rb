@@ -8,7 +8,7 @@ class PlaceService
                     id: id,
                     name: raw_place['addresses'][0]['business']['identities'][0]['name'],
                     address: deserialize_address(raw_place),
-                    opening_hours: deserialize_opening_hours(raw_place)
+                    openingHours: deserialize_opening_hours(raw_place)
                   })
   end
 
@@ -22,7 +22,7 @@ class PlaceService
     I18n.t('date.day_names').map do |day|
       {
         day: day,
-        open_during: weekly_hours.fetch(day.downcase, []).map { |duration| "#{duration['start']} - #{duration['end']}" }
+        openDuring: weekly_hours.fetch(day.downcase, []).map { |duration| "#{duration['start']} - #{duration['end']}" }
       }
     end
   end
